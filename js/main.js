@@ -1,6 +1,37 @@
 // Constructors
 // Only add code to *THIS* section!
 
+let Dog = function (obj) {
+
+  obj = obj || {};
+
+  this.status = obj.status || 'normal';
+  this.color = obj.color; 
+  this.hungry = (obj.hungry !== undefined) ? obj.hungry :true;
+  //ternary operation, to write an in-line if statement 
+  // If this is truthy ? then this is true this is true
+  // When Moonshine is created he will be hungry , but Sadie wont 
+
+
+};
+
+
+let Human = function (obj){
+
+  obj = obj || {};
+
+  this.pet = function (dog) {
+    dog.status = 'happy';
+  };
+
+  this.feed = function (dog) {
+    dog.hungry = false;
+  };
+
+  this.cool = (obj.cool !== undefined) ? obj.cool :false;
+
+};
+
 ///
 ///
 ///

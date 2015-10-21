@@ -2,6 +2,35 @@
 // Constructors
 // Only add code to *THIS* section!
 
+'use strict';
+
+var Dog = function Dog(obj) {
+
+  obj = obj || {};
+
+  this.status = obj.status || 'normal';
+  this.color = obj.color;
+  this.hungry = obj.hungry !== undefined ? obj.hungry : true;
+  //ternary operation, to write an in-line if statement
+  // If this is truthy ? then this is true this is true
+  // When Moonshine is created he will be hungry , but Sadie wont
+};
+
+var Human = function Human(obj) {
+
+  obj = obj || {};
+
+  this.pet = function (dog) {
+    dog.status = 'happy';
+  };
+
+  this.feed = function (dog) {
+    dog.hungry = false;
+  };
+
+  this.cool = obj.cool !== undefined ? obj.cool : false;
+};
+
 ///
 ///
 ///
@@ -9,8 +38,6 @@
 
 // Do not ADD or MODIFY code below this line :)
 // Dogs
-'use strict';
-
 var sadie = new Dog({
   color: 'black',
   hungry: false
